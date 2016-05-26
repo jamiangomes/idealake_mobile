@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/materialize.css" />
+        <link rel="stylesheet" type="text/css" href="css/common.css" />
+        <style>
+            body{
+                background-color:black;
+                color:white;
+            }
+            
+            p{
+                margin:0px;
+            }
+        </style>
+        <title>Idealake</title>
+    </head>
+    <body>
+    
+    <div class="container" style="margin-top:10px;">
+        <img src="http://www.idealake.com/images/new_logo.png" alt="">
+        
+        			
+					<h5>Idealake Information Technologies Pvt. Ltd.</h5>
+					<p>2nd floor R. R. House, Mathuradas</p> 
+					<p>Mill Compound, Senapati Bapat</p> 
+					<p>Marg, Lower Parel,</p>
+					<p class="last">Mumbai - 400 013.</p>
+					
+					<p><span class="small-text2">Phone:</span> <a href="tel:91 - 22 - 4322 2800">91 - 22 - 4322 2800 </a></p>
+					<p><span class="small-text2"> Email:</span> <a href="mailto:hr@idealake.com"><strong>sales@idealake.com</strong></a></p>
+					<p><span class="small-text2 paddr"></span> <a href="mailto:hr@idealake.com"><strong>hr@idealake.com</strong></a></p>
+        
+            
+     </div><!-- end of container -->   
+    
+        <br/>
+        
+     <div id="googleMap" style="width:100%;height:380px;"></div>   
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/materialize.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script src="http://maps.googleapis.com/maps/api/js"></script>
+        
+        <script type="text/javascript">
+            
+            var myCenter=new google.maps.LatLng(19.0012405,72.8295436);
+            
+            function initialize() {
+            var mapProp = {
+            center:myCenter,
+            zoom:20,
+            mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+            
+            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+            var marker=new google.maps.Marker({
+            position:myCenter,
+            animation:google.maps.Animation.BOUNCE
+            });
+
+            marker.setMap(map);    
+                
+            }
+            
+            google.maps.event.addDomListener(window, 'load', initialize);
+             
+        </script>
+        
+    </body>
+</html>

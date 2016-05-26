@@ -1,0 +1,22 @@
+.sidenavigicon{
+    color:black;
+}
+
+.parallax-container {
+      height: 500px;
+    }
+
+.sidenavlogo img{
+    vertical-align:bottom;
+    
+}
+
+.sidenavlogotext img{
+    vertical-align: top;
+    margin: 5px 0 0 5px;
+}
+
+.punchliner{    
+    font-size: large;
+    font-weight: bold;
+}
